@@ -23,17 +23,17 @@ do
 		> "
 	read menuInput
 	case $menuInput in
-		 1) 	printf "___________________________\n"
+		 1) 	printf "___________________________\r\n"
 			printf "System Information\r\n"
-			printf "___________________________\n"
+			printf "___________________________\r\n"
 			printf "Operating System: Linux\r\n"
 			echo "$(lsb_release -a)"
 			printf "\r\nPress [enter] key to continue\r\n"
 			read osInput 
 			 ;;
-		 2)     printf "___________________________\n"
+		 2)     printf "___________________________\r\n"
 			printf "Hostname and DNS Information\r\n"
-			printf "___________________________\n"
+			printf "___________________________\r\n"
 			echo "Hostname: $(hostname)"
 			echo "DNS Domain: $(hostname -d)"
 			echo "Fully qualified domain name: $(hostname -f)"
@@ -42,8 +42,23 @@ do
 			printf "\r\nPress [enter] to continue\r\n"
 			read dnsInput
 			 ;;
-		 3) printf "\tNetwork Information selected\r\n"
-			 ;;
+		 3)     printf "___________________________\r\n"
+			printf "Network Information\r\n"
+			printf "___________________________\r\n"
+			numIF=$(ip link show | wc -l)
+			printf "Total network interfaces found : %i\r\n" "$((numIF / 2))"
+		       	echo  "$(ip link show)"
+			printf "\r\n*-*-*-*-*-*-*-*-*-*-*-*-*-*\r\n"
+			printf "* * * Network Routing * * *\r\n"
+			printf "*-*-*-*-*-*-*-*-*-*-*-*-*-*\r\n"
+			echo "$(route -e)"
+			printf "\r\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\r\n"
+			printf "* Interface Traffic Information *\r\n"
+			printf "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\r\n"
+			echo "$(netstat -i)"
+			printf "\r\nPress [enter] to continue\r\n"
+			read nwInput
+			;;
 		 4) printf "\tWho selected\r\n"
 			 ;;
 		 5) printf "\tLogin selected\r\n"
