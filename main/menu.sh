@@ -31,7 +31,16 @@ do
 			printf "\r\nPress [enter] key to continue\r\n"
 			read osInput 
 			 ;;
-		 2) printf "\tHost and DNS Information selected\r\n"
+		 2)     printf "___________________________\n"
+			printf "Hostname and DNS Information\r\n"
+			printf "___________________________\n"
+			echo "Hostname: $(hostname)"
+			echo "DNS Domain: $(hostname -d)"
+			echo "Fully qualified domain name: $(hostname -f)"
+			echo "Network address (IP) : $(hostname -i)"
+			echo "DNS name servers (DNS IP) : "$(grep nameserver /etc/resolv.conf)""
+			printf "\r\nPress [enter] to continue\r\n"
+			read dnsInput
 			 ;;
 		 3) printf "\tNetwork Information selected\r\n"
 			 ;;
