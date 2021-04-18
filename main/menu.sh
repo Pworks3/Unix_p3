@@ -85,7 +85,13 @@ do
 			printf "\r\nPress [enter] to continue\r\n"
 			read dInput
 			 ;;
-		 8) printf "\tHome selected\r\n"
+		 8)	printf "___________________________\r\n"
+			printf "Home File Tree\r\n"
+			printf "___________________________\r\n"
+			./script.sh ~/ treefile.html
+			printf "\nTree has been printed ot an HTML file\n"
+			printf "\r\nPress [enter] to continue\r\n"
+			read tInput
 			 ;;
 		 9) printf "\tFile Op selected\r\n"
 			 ;;
