@@ -66,8 +66,13 @@ do
 			printf "\r\nPress [enter] to continue\r\n"
 		        read wInput	
 			;;
-		 5) printf "\tLogin selected\r\n"
-			 ;;
+		 5)     printf "___________________________\r\n"
+			printf "Last Logged In Users\r\n"
+			printf "___________________________\r\n"
+			echo "$(last -w)"
+			printf "\r\nPress [enter] to continue\r\n"
+			read lInput
+			;;
 		 6) printf "\tIP selected\r\n"
 			 ;;
 		 7) printf "\tDisk selected\r\n"
