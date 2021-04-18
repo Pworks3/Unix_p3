@@ -78,7 +78,12 @@ do
 			printf "___________________________\r\n"
 			echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
 			 ;;
-		 7) printf "\tDisk selected\r\n"
+		 7) 	printf "___________________________\r\n"
+			printf "Disk Usage Information\r\n"
+			printf "___________________________\r\n"
+			echo "$(df --total -hl)"
+			printf "\r\nPress [enter] to continue\r\n"
+			read dInput
 			 ;;
 		 8) printf "\tHome selected\r\n"
 			 ;;
