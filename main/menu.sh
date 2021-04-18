@@ -73,7 +73,10 @@ do
 			printf "\r\nPress [enter] to continue\r\n"
 			read lInput
 			;;
-		 6) printf "\tIP selected\r\n"
+		 6) 	printf "___________________________\r\n"
+			printf "Public IP Information\r\n"
+			printf "___________________________\r\n"
+			echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
 			 ;;
 		 7) printf "\tDisk selected\r\n"
 			 ;;
