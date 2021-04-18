@@ -59,8 +59,13 @@ do
 			printf "\r\nPress [enter] to continue\r\n"
 			read nwInput
 			;;
-		 4) printf "\tWho selected\r\n"
-			 ;;
+		 4) 	printf "___________________________\r\n"
+			printf "Who is Online?\r\n"
+			printf "___________________________\r\n"
+			echo "$(w)"
+			printf "\r\nPress [enter] to continue\r\n"
+		        read wInput	
+			;;
 		 5) printf "\tLogin selected\r\n"
 			 ;;
 		 6) printf "\tIP selected\r\n"
