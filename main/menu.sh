@@ -90,7 +90,7 @@ do
 		 8)	printf "___________________________\n"
 			printf "Home File Tree\n"
 			printf "___________________________\n"
-			./script.sh ~/ treefile.html
+			./../dependencies/script.sh ~/ treefile.html
 			printf "\nTree has been printed ot an HTML file\n"
 			printf "\nPress [enter] to continue\n"
 			read tInput
